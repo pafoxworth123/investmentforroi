@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Real Estate Investment Calculator | BRRRR, Cash-on-Cash, DSCR & Flip ROI</title>
-  <meta name="description" content="Free real estate investment calculator: BRRRR analysis, Cash-on-Cash returns, DSCR, and Fix-and-Flip profitability. For small investors, house hackers, and landlords.">
-  <meta name="keywords" content="real estate calculator, BRRRR calculator, cash-on-cash return, DSCR calculator, fix and flip calculator, investment property calculator, ROI calculator">
-  <link rel="canonical" href="https://investmentforroi.com/">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Investment Calculator | BRRRR, Cash‑on‑Cash, DSCR &amp; Flip ROI</title>
+  <meta name="description" content="Free real estate investment calculator: BRRRR analysis, Cash‑on‑Cash returns, DSCR, and Fix‑and‑Flip profitability. For small investors, house hackers, and landlords." />
+  <meta name="keywords" content="real estate calculator, BRRRR calculator, cash‑on‑cash return, DSCR calculator, fix and flip calculator, investment property calculator, ROI calculator" />
+  <link rel="canonical" href="https://investmentforroi.com/" />
+
   <!-- Custom Favicon (SVG House Logo) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232a7f6e' rx='20'/%3E%3Ctext x='50' y='72' font-size='55' text-anchor='middle' fill='white'%3E🏠%3C/text%3E%3C/svg%3E">
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Real Estate Investment Calculator | Free ROI Tools">
-  <meta property="og:description" content="Calculate BRRRR, Cash-on-Cash, DSCR, and Fix-and-Flip profitability instantly. Free tool for real estate investors.">
-  <meta property="og:url" content="https://investmentforroi.com">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://investmentforroi.com/og-image.jpg">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Real Estate Investment Calculator">
-  <meta name="twitter:description" content="Free BRRRR, Cash-on-Cash, DSCR, and Flip calculators for real estate investors.">
-  
-  <!-- hreflang for multilingual SEO -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232a7f6e' rx='20'/%3E%3Ctext x='50' y='72' font-size='55' text-anchor='middle' fill='white'%3E🏠%3C/text%3E%3C/svg%3E" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Real Estate Investment Calculator | Free ROI Tools" />
+  <meta property="og:description" content="Calculate BRRRR, Cash‑on‑Cash, DSCR, and Fix‑and‑Flip profitability instantly. Free tool for real estate investors." />
+  <meta property="og:url" content="https://investmentforroi.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://investmentforroi.com/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Real Estate Investment Calculator" />
+  <meta name="twitter:description" content="Free BRRRR, Cash‑on‑Cash, DSCR, and Flip calculators for real estate investors." />
+
+  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://investmentforroi.com/" />
   <link rel="alternate" hreflang="es" href="https://investmentforroi.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://investmentforroi.com/" />
-  
-  <!-- Schema.org structured data -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "InvestmentForROI Calculator",
     "url": "https://investmentforroi.com",
-    "description": "Free real estate investment calculator for BRRRR, Cash-on-Cash, DSCR, and Fix-and-Flip analysis.",
+    "description": "Free real estate investment calculator for BRRRR, Cash‑on‑Cash, DSCR, and Fix‑and‑Flip analysis.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires JavaScript"
   }
   </script>
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <style>
     * {
       margin: 0;
@@ -54,7 +49,6 @@
       box-sizing: border-box;
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-
     body {
       background: #f4f7fc;
       display: flex;
@@ -63,7 +57,6 @@
       padding: 2rem 1rem;
       min-height: 100vh;
     }
-
     .container {
       max-width: 1300px;
       width: 100%;
@@ -107,33 +100,32 @@
     }
 
     .logo h1 {
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: #0b2b40;
       letter-spacing: -0.5px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      margin-bottom: 20px;  /* 👈 2 full lines of spacing */
     }
-    .logo h1 .icon {
-      font-size: 2rem;
+    .logo h1 .logo-emojis {
+      font-size: 3.2rem;
       line-height: 1;
+      letter-spacing: 2px;
     }
     .logo span {
       color: #2a7f6e;
     }
-    .logo small {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: #4a6479;
-      margin-top: 4px;
-    }
-    .logo .subtitle {
-      font-size: 0.75rem;
-      color: #4a6479;
-      margin-top: 2px;
-      font-weight: 400;
+
+    /* Combined tagline + subtitle – one bold line with extra spacing */
+    .logo .tagline {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1f3a4b;
+      margin-top: 0;
+      padding-bottom: 8px;  /* extra breathing room */
+      line-height: 1.4;
     }
 
     .ad-badge {
@@ -161,7 +153,6 @@
       gap: 1.8rem;
       margin-top: 0.5rem;
     }
-
     .calc-card {
       background: white;
       border-radius: 28px;
@@ -172,12 +163,10 @@
       display: flex;
       flex-direction: column;
     }
-
     .calc-card:hover {
       border-color: #cddfe9;
       box-shadow: 0 20px 35px rgba(30, 60, 80, 0.06);
     }
-
     .card-title {
       display: flex;
       align-items: center;
@@ -194,14 +183,12 @@
       width: 1.8rem;
       font-size: 1.5rem;
     }
-
     .input-group {
       margin-bottom: 1rem;
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
-
     .input-group label {
       font-size: 0.8rem;
       font-weight: 500;
@@ -210,7 +197,6 @@
       display: flex;
       justify-content: space-between;
     }
-
     .input-group input {
       padding: 0.6rem 0.8rem;
       border: 1px solid #d6e2ec;
@@ -220,20 +206,12 @@
       transition: 0.15s;
       width: 100%;
     }
-
     .input-group input:focus {
       outline: none;
       border-color: #2a7f6e;
       box-shadow: 0 0 0 3px rgba(42, 127, 110, 0.15);
       background: white;
     }
-
-    .input-group .hint {
-      font-size: 0.7rem;
-      color: #6d8a9c;
-      margin-top: 2px;
-    }
-
     .result-box {
       background: #f0f6fb;
       border-radius: 18px;
@@ -241,7 +219,6 @@
       margin: 1.2rem 0 0.8rem;
       border-left: 4px solid #2a7f6e;
     }
-
     .result-box .primary {
       font-size: 1.7rem;
       font-weight: 700;
@@ -260,7 +237,6 @@
       border-top: 1px dashed #c7dae7;
       padding-top: 6px;
     }
-
     .calc-actions {
       margin-top: auto;
       display: flex;
@@ -268,7 +244,6 @@
       flex-wrap: wrap;
       justify-content: flex-end;
     }
-
     .btn {
       padding: 0.5rem 1.2rem;
       border: none;
@@ -283,7 +258,6 @@
       align-items: center;
       gap: 6px;
     }
-
     .btn-primary {
       background: #1c5b4e;
       color: white;
@@ -313,7 +287,6 @@
       justify-content: space-between;
       gap: 1rem;
     }
-
     .affiliate-banner p {
       color: #164257;
       font-weight: 500;
@@ -343,7 +316,6 @@
       background: #dae8f2;
       border-color: #b7cedd;
     }
-
     .footer-note {
       margin-top: 2.5rem;
       color: #4a6f82;
@@ -353,15 +325,16 @@
       padding-top: 1.8rem;
       width: 100%;
     }
-
     @media (max-width: 480px) {
       .calc-card { padding: 1.5rem 1rem; }
+      .logo h1 .logo-emojis { font-size: 2.6rem; }
+      .logo .tagline { font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
-  
+
   <!-- Language Switcher -->
   <div class="language-switcher">
     <a href="/" class="active">🇬🇧 English</a>
@@ -372,11 +345,13 @@
   <header class="app-header">
     <div class="logo">
       <h1>
-        <span class="icon">🏠</span>
+        <span class="logo-emojis">🏠 + 🔨 = 💰</span>
         investment<span>ForROI</span>
       </h1>
-      <small><i class="fas fa-calculator"></i> BRRRR · Cash-on-Cash · DSCR · Fix & Flip</small>
-      <div class="subtitle">(Investment Analysis, Remodeling/Rehab, and Net Profit)</div>
+      <!-- One bold line: tagline + subtitle combined -->
+      <div class="tagline">
+        <i class="fas fa-calculator"></i> BRRRR · Cash‑on‑Cash · DSCR · Fix &amp; Flip &nbsp;—&nbsp; (Investment Analysis, Remodeling/Rehab, and Net Profit)
+      </div>
     </div>
     <div class="ad-badge">
       <i class="fas fa-bullhorn"></i> <span>Advertiser</span> <span style="opacity:0.4;margin:0 4px;">|</span> <i class="fas fa-arrow-right"></i> Lender deals
@@ -390,19 +365,19 @@
       <div class="card-title"><i class="fas fa-rotate"></i> BRRRR</div>
       <div class="input-group">
         <label>Purchase price <span>$</span></label>
-        <input type="number" id="brrrrPurchase" value="150000" step="1000">
+        <input type="number" id="brrrrPurchase" value="150000" step="1000" />
       </div>
       <div class="input-group">
         <label>Rehab cost <span>$</span></label>
-        <input type="number" id="brrrrRehab" value="30000" step="1000">
+        <input type="number" id="brrrrRehab" value="30000" step="1000" />
       </div>
       <div class="input-group">
-        <label>After-repair value (ARV) <span>$</span></label>
-        <input type="number" id="brrrrArv" value="220000" step="1000">
+        <label>After‑repair value (ARV) <span>$</span></label>
+        <input type="number" id="brrrrArv" value="220000" step="1000" />
       </div>
       <div class="input-group">
         <label>Rent / month <span>$</span></label>
-        <input type="number" id="brrrrRent" value="1950" step="50">
+        <input type="number" id="brrrrRent" value="1950" step="50" />
       </div>
       <div class="result-box" id="brrrrResult">
         <div class="primary" id="brrrrEquity">$40,000</div>
@@ -414,20 +389,20 @@
       </div>
     </div>
 
-    <!-- 2. Cash-on-Cash -->
+    <!-- 2. Cash‑on‑Cash -->
     <div class="calc-card" id="cashCard">
-      <div class="card-title"><i class="fas fa-hand-holding-usd"></i> Cash-on-Cash</div>
+      <div class="card-title"><i class="fas fa-hand-holding-usd"></i> Cash‑on‑Cash</div>
       <div class="input-group">
         <label>Total cash invested <span>$</span></label>
-        <input type="number" id="cashInvested" value="45000" step="1000">
+        <input type="number" id="cashInvested" value="45000" step="1000" />
       </div>
       <div class="input-group">
         <label>Annual cash flow <span>$</span></label>
-        <input type="number" id="cashAnnual" value="7800" step="100">
+        <input type="number" id="cashAnnual" value="7800" step="100" />
       </div>
       <div class="result-box">
         <div class="primary" id="cashResult">17.3%</div>
-        <div class="secondary">Cash-on-cash return</div>
+        <div class="secondary">Cash‑on‑cash return</div>
         <div class="sub"><i class="far fa-calendar-alt"></i> Based on annual income</div>
       </div>
       <div class="calc-actions">
@@ -440,36 +415,36 @@
       <div class="card-title"><i class="fas fa-chart-pie"></i> DSCR</div>
       <div class="input-group">
         <label>Net operating income (NOI) <span>$</span></label>
-        <input type="number" id="dscrNoi" value="42000" step="1000">
+        <input type="number" id="dscrNoi" value="42000" step="1000" />
       </div>
       <div class="input-group">
         <label>Total debt service (annual) <span>$</span></label>
-        <input type="number" id="dscrDebt" value="32000" step="1000">
+        <input type="number" id="dscrDebt" value="32000" step="1000" />
       </div>
       <div class="result-box">
         <div class="primary" id="dscrResult">1.31</div>
         <div class="secondary">Debt Service Coverage Ratio</div>
-        <div class="sub" id="dscrStatus">✅ Healthy (>1.25)</div>
+        <div class="sub" id="dscrStatus">✅ Healthy (&gt;1.25)</div>
       </div>
       <div class="calc-actions">
         <button class="btn btn-primary" id="calcDscr"><i class="fas fa-sync-alt"></i> Compute</button>
       </div>
     </div>
 
-    <!-- 4. Fix-and-Flip -->
+    <!-- 4. Fix‑and‑Flip -->
     <div class="calc-card" id="flipCard">
-      <div class="card-title"><i class="fas fa-hammer"></i> Fix & Flip</div>
+      <div class="card-title"><i class="fas fa-hammer"></i> Fix &amp; Flip</div>
       <div class="input-group">
         <label>Purchase price <span>$</span></label>
-        <input type="number" id="flipPurchase" value="120000" step="5000">
+        <input type="number" id="flipPurchase" value="120000" step="5000" />
       </div>
       <div class="input-group">
         <label>Rehab / holding costs <span>$</span></label>
-        <input type="number" id="flipRehab" value="35000" step="1000">
+        <input type="number" id="flipRehab" value="35000" step="1000" />
       </div>
       <div class="input-group">
-        <label>After-repair value (ARV) <span>$</span></label>
-        <input type="number" id="flipArv" value="185000" step="5000">
+        <label>After‑repair value (ARV) <span>$</span></label>
+        <input type="number" id="flipArv" value="185000" step="5000" />
       </div>
       <div class="result-box">
         <div class="primary" id="flipProfit">$30,000</div>
@@ -482,9 +457,9 @@
     </div>
   </div>
 
-  <!-- Affiliate / Lead Gen area -->
+  <!-- Affiliate Banner -->
   <div class="affiliate-banner">
-    <p><i class="fas fa-handshake"></i> Get pre-qualified · Compare lenders · Property tools</p>
+    <p><i class="fas fa-handshake"></i> Get pre‑qualified · Compare lenders · Property tools</p>
     <div class="affiliate-links">
       <a href="#"><i class="fas fa-credit-card"></i> Lenders</a>
       <a href="#"><i class="fas fa-tools"></i> Estimator</a>
@@ -494,39 +469,35 @@
   </div>
 
   <div class="footer-note">
-    <i class="fas fa-info-circle"></i> All calculations are estimates. Always consult a financial advisor. 
+    <i class="fas fa-info-circle"></i> All calculations are estimates. Always consult a financial advisor.
     <span style="margin:0 8px;">·</span> investmentforroi.com
   </div>
 </div>
 
 <script>
   (function() {
-    // ----- BRRRR -----
+    // BRRRR
     function calcBrrrr() {
       const purchase = parseFloat(document.getElementById('brrrrPurchase').value) || 0;
       const rehab = parseFloat(document.getElementById('brrrrRehab').value) || 0;
       const arv = parseFloat(document.getElementById('brrrrArv').value) || 0;
       const rent = parseFloat(document.getElementById('brrrrRent').value) || 0;
-
       const totalCost = purchase + rehab;
       const equity = Math.max(0, arv - totalCost);
       const roi = totalCost > 0 ? (equity / totalCost) * 100 : 0;
-      const cashflow = rent * 0.7; 
-
+      const cashflow = rent * 0.7;
       document.getElementById('brrrrEquity').textContent = '$' + equity.toLocaleString('en-US', {maximumFractionDigits:0});
       document.getElementById('brrrrRoi').textContent = 'ROI: ' + roi.toFixed(1) + '%';
       document.getElementById('brrrrCashflow').textContent = 'Monthly cash flow: $' + cashflow.toLocaleString('en-US', {maximumFractionDigits:0});
     }
-
-    // ----- Cash-on-Cash -----
+    // Cash‑on‑Cash
     function calcCash() {
       const invested = parseFloat(document.getElementById('cashInvested').value) || 1;
       const annual = parseFloat(document.getElementById('cashAnnual').value) || 0;
       const coc = (annual / invested) * 100;
       document.getElementById('cashResult').textContent = coc.toFixed(1) + '%';
     }
-
-    // ----- DSCR -----
+    // DSCR
     function calcDscr() {
       const noi = parseFloat(document.getElementById('dscrNoi').value) || 0;
       const debt = parseFloat(document.getElementById('dscrDebt').value) || 1;
@@ -537,8 +508,7 @@
       else if (ratio >= 1.0) status.innerHTML = '⚠️ Marginal (1.0–1.25)';
       else status.innerHTML = '❌ Below 1.0 (risky)';
     }
-
-    // ----- Fix & Flip -----
+    // Fix & Flip
     function calcFlip() {
       const purchase = parseFloat(document.getElementById('flipPurchase').value) || 0;
       const rehab = parseFloat(document.getElementById('flipRehab').value) || 0;
@@ -550,16 +520,14 @@
       document.getElementById('flipNote').textContent = profit >= 0 ? '✅ Positive equity' : '⚠️ Potential loss';
     }
 
-    // Attach listeners
     document.getElementById('calcBrrrr').addEventListener('click', calcBrrrr);
     document.getElementById('calcCash').addEventListener('click', calcCash);
     document.getElementById('calcDscr').addEventListener('click', calcDscr);
     document.getElementById('calcFlip').addEventListener('click', calcFlip);
 
-    // Auto-calc on input change
     const inputs = document.querySelectorAll('input[type="number"]');
     inputs.forEach(inp => {
-      inp.addEventListener('change', function(e) {
+      inp.addEventListener('change', function() {
         const card = this.closest('.calc-card');
         if (!card) return;
         if (card.id === 'brrrrCard') calcBrrrr();
@@ -569,25 +537,20 @@
       });
     });
 
-    // Initial calc
     calcBrrrr();
     calcCash();
     calcDscr();
     calcFlip();
 
-    // Affiliate links click (demo)
     document.querySelectorAll('.affiliate-links a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         alert('🔗 Lead gen / affiliate link: ' + this.textContent.trim() + '\n(integration ready for AdSense / Ezoic)');
       });
     });
-
-    // Ad badge click (demo)
     document.querySelector('.ad-badge')?.addEventListener('click', function() {
       alert('📢 Ad space / sponsored lender listings — monetization ready.');
     });
-
   })();
 </script>
 </body>
