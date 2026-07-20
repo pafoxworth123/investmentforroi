@@ -3,9 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InvestmentForROI · Real Estate Calculator</title>
-  <!-- Font Awesome Icons (free) -->
+  
+  <!-- Primary Meta Tags -->
+  <title>Real Estate Investment Calculator | BRRRR, Cash-on-Cash, DSCR & Flip ROI</title>
+  <meta name="description" content="Free real estate investment calculator: BRRRR analysis, Cash-on-Cash returns, DSCR, and Fix-and-Flip profitability. For small investors, house hackers, and landlords.">
+  <meta name="keywords" content="real estate calculator, BRRRR calculator, cash-on-cash return, DSCR calculator, fix and flip calculator, investment property calculator, ROI calculator">
+  <link rel="canonical" href="https://investmentforroi.com/">
+  
+  <!-- Custom Favicon (SVG House Logo) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232a7f6e' rx='20'/%3E%3Ctext x='50' y='72' font-size='55' text-anchor='middle' fill='white'%3E🏠%3C/text%3E%3C/svg%3E">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Real Estate Investment Calculator | Free ROI Tools">
+  <meta property="og:description" content="Calculate BRRRR, Cash-on-Cash, DSCR, and Fix-and-Flip profitability instantly. Free tool for real estate investors.">
+  <meta property="og:url" content="https://investmentforroi.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://investmentforroi.com/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Real Estate Investment Calculator">
+  <meta name="twitter:description" content="Free BRRRR, Cash-on-Cash, DSCR, and Flip calculators for real estate investors.">
+  
+  <!-- hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://investmentforroi.com/" />
+  <link rel="alternate" hreflang="es" href="https://investmentforroi.com/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://investmentforroi.com/" />
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "InvestmentForROI Calculator",
+    "url": "https://investmentforroi.com",
+    "description": "Free real estate investment calculator for BRRRR, Cash-on-Cash, DSCR, and Fix-and-Flip analysis.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript"
+  }
+  </script>
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     * {
       margin: 0;
@@ -28,7 +69,34 @@
       width: 100%;
     }
 
-    /* header */
+    /* Language switcher */
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      background: #f8fafc;
+      border-radius: 40px;
+      margin-bottom: 1rem;
+    }
+    .language-switcher a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+    .language-switcher a.active {
+      background: #2a7f6e;
+      color: white !important;
+    }
+    .language-switcher a.inactive {
+      color: #4a6479;
+    }
+    .language-switcher a.inactive:hover {
+      background: #e6f0f7;
+    }
+
+    /* Header */
     .app-header {
       display: flex;
       flex-wrap: wrap;
@@ -43,6 +111,13 @@
       font-weight: 700;
       color: #0b2b40;
       letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo h1 .icon {
+      font-size: 2rem;
+      line-height: 1;
     }
     .logo span {
       color: #2a7f6e;
@@ -53,6 +128,12 @@
       font-weight: 400;
       color: #4a6479;
       margin-top: 4px;
+    }
+    .logo .subtitle {
+      font-size: 0.75rem;
+      color: #4a6479;
+      margin-top: 2px;
+      font-weight: 400;
     }
 
     .ad-badge {
@@ -73,7 +154,7 @@
       color: #2a7f6e;
     }
 
-    /* card grid */
+    /* Calculator Grid */
     .calculator-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -219,6 +300,7 @@
       background: #e6f0f7;
     }
 
+    /* Affiliate Banner */
     .affiliate-banner {
       margin: 2.8rem 0 1.5rem;
       background: white;
@@ -279,11 +361,22 @@
 </head>
 <body>
 <div class="container">
+  
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="/" class="active">🇬🇧 English</a>
+    <a href="/es/" class="inactive">🇪🇸 Español</a>
+  </div>
+
   <!-- Header -->
   <header class="app-header">
     <div class="logo">
-      <h1>investment<span>ForROI</span></h1>
-      <small><i class="fas fa-calculator"></i> BRRRR · Cash-on-Cash · DSCR · Fix&Flip</small>
+      <h1>
+        <span class="icon">🏠</span>
+        investment<span>ForROI</span>
+      </h1>
+      <small><i class="fas fa-calculator"></i> BRRRR · Cash-on-Cash · DSCR · Fix & Flip</small>
+      <div class="subtitle">(Investment Analysis, Remodeling/Rehab, and Net Profit)</div>
     </div>
     <div class="ad-badge">
       <i class="fas fa-bullhorn"></i> <span>Advertiser</span> <span style="opacity:0.4;margin:0 4px;">|</span> <i class="fas fa-arrow-right"></i> Lender deals
@@ -418,7 +511,6 @@
       const totalCost = purchase + rehab;
       const equity = Math.max(0, arv - totalCost);
       const roi = totalCost > 0 ? (equity / totalCost) * 100 : 0;
-      // simple cash flow: rent * 0.7 (expenses) - 0 (dummy)
       const cashflow = rent * 0.7; 
 
       document.getElementById('brrrrEquity').textContent = '$' + equity.toLocaleString('en-US', {maximumFractionDigits:0});
@@ -426,7 +518,7 @@
       document.getElementById('brrrrCashflow').textContent = 'Monthly cash flow: $' + cashflow.toLocaleString('en-US', {maximumFractionDigits:0});
     }
 
-    // ----- Cash on Cash -----
+    // ----- Cash-on-Cash -----
     function calcCash() {
       const invested = parseFloat(document.getElementById('cashInvested').value) || 1;
       const annual = parseFloat(document.getElementById('cashAnnual').value) || 0;
@@ -458,13 +550,13 @@
       document.getElementById('flipNote').textContent = profit >= 0 ? '✅ Positive equity' : '⚠️ Potential loss';
     }
 
-    // attach listeners
+    // Attach listeners
     document.getElementById('calcBrrrr').addEventListener('click', calcBrrrr);
     document.getElementById('calcCash').addEventListener('click', calcCash);
     document.getElementById('calcDscr').addEventListener('click', calcDscr);
     document.getElementById('calcFlip').addEventListener('click', calcFlip);
 
-    // Auto-calc on input change (optional)
+    // Auto-calc on input change
     const inputs = document.querySelectorAll('input[type="number"]');
     inputs.forEach(inp => {
       inp.addEventListener('change', function(e) {
@@ -477,13 +569,13 @@
       });
     });
 
-    // initial calc
+    // Initial calc
     calcBrrrr();
     calcCash();
     calcDscr();
     calcFlip();
 
-    // extra: "lead gen" click simulation (just alert)
+    // Affiliate links click (demo)
     document.querySelectorAll('.affiliate-links a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -491,7 +583,7 @@
       });
     });
 
-    // ad badge click (demo)
+    // Ad badge click (demo)
     document.querySelector('.ad-badge')?.addEventListener('click', function() {
       alert('📢 Ad space / sponsored lender listings — monetization ready.');
     });
