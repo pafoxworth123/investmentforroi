@@ -6,13 +6,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Add more URLs here as you create new pages -->
-  <!-- Example for a privacy policy page:
   <url>
-    <loc>https://investmentforroi.com/privacy</loc>
+    <loc>https://investmentforroi.com/es/</loc>
     <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  -->
 </urlset>
