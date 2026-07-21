@@ -230,4 +230,350 @@
       color: #0b2b40;
       line-height: 1.2;
     }
-    .result-box .
+        .result-box .secondary {
+      font-size: 0.9rem;
+      color: #2b5a6e;
+      margin-top: 4px;
+    }
+    .result-box .sub {
+      font-size: 0.75rem;
+      color: #4f748a;
+      margin-top: 6px;
+      border-top: 1px dashed #c7dae7;
+      padding-top: 6px;
+    }
+    .calc-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 40px;
+      background: #eaf0f5;
+      color: #1b4052;
+      font-weight: 500;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary {
+      background: #1c5b4e;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #13493e;
+      transform: scale(0.97);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #c8dbe8;
+    }
+    .btn-outline:hover {
+      background: #e6f0f7;
+    }
+    .affiliate-banner {
+      margin: 2.8rem 0 1.5rem;
+      background: white;
+      border-radius: 40px;
+      padding: 1rem 1.8rem;
+      border: 1px solid #dbe4ed;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .affiliate-banner p {
+      color: #164257;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .affiliate-banner p i {
+      color: #2a7f6e;
+      margin-right: 8px;
+    }
+    .affiliate-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .affiliate-links a {
+      background: #eef5fa;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1a4b5e;
+      text-decoration: none;
+      transition: 0.1s;
+      border: 1px solid transparent;
+    }
+    .affiliate-links a:hover {
+      background: #dae8f2;
+      border-color: #b7cedd;
+    }
+    .footer-note {
+      margin-top: 2.5rem;
+      color: #4a6f82;
+      font-size: 0.8rem;
+      text-align: center;
+      border-top: 1px solid #dce8f0;
+      padding-top: 1.8rem;
+      width: 100%;
+    }
+    @media (max-width: 480px) {
+      .calc-card { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="/" class="inactive">🇬🇧 English</a>
+    <a href="/es/" class="active">🇪🇸 Español</a>
+  </div>
+
+  <!-- Header -->
+  <div class="app-header">
+    <div class="logo">
+      <h1>
+        <span class="logo-emojis">🏠</span>
+        investment<span>ForROI</span>
+      </h1>
+      <div class="tagline">Analizador de Inversión en Bienes Raíces</div>
+    </div>
+    <div class="ad-badge">
+      <i class="fas fa-bullhorn"></i> <span>Anunciante</span> <span style="opacity:0.4;margin:0 4px;">|</span> <i class="fas fa-arrow-right"></i> Ofertas de prestamistas
+    </div>
+  </div>
+
+  <!-- Calculator Grid -->
+  <div class="calculator-grid" id="calcGrid">
+    <!-- 1. BRRRR -->
+    <div class="calc-card" id="brrrrCard">
+      <div class="card-title">
+        <i class="fas fa-rotate"></i> 
+        <div>BRRRR <span class="subtitle">Comprar, Reformar, Alquilar, Refinanciar, Repetir</span></div>
+      </div>
+      <div class="input-group">
+        <label>Precio de compra <span>$</span></label>
+        <input type="number" id="brrrrPurchase" value="150000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Coste de reforma <span>$</span></label>
+        <input type="number" id="brrrrRehab" value="30000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Valor después de reforma (VDR) <span>$</span></label>
+        <input type="number" id="brrrrArv" value="220000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Alquiler / mes <span>$</span></label>
+        <input type="number" id="brrrrRent" value="1950" step="50">
+      </div>
+      <div class="result-box" id="brrrrResult">
+        <div class="primary" id="brrrrEquity">$40,000</div>
+        <div class="secondary" id="brrrrRoi">ROI: 22.2%</div>
+        <div class="sub" id="brrrrCashflow">Flujo de caja mensual: $1,450</div>
+      </div>
+      <div class="calc-actions">
+        <button class="btn btn-primary" id="calcBrrrr"><i class="fas fa-sync-alt"></i> Recalcular</button>
+      </div>
+    </div>
+
+    <!-- 2. Retorno sobre Efectivo -->
+    <div class="calc-card" id="cashCard">
+      <div class="card-title">
+        <i class="fas fa-hand-holding-usd"></i> 
+        <div>Retorno sobre Efectivo <span class="subtitle">Cash-on-Cash</span></div>
+      </div>
+      <div class="input-group">
+        <label>Capital total invertido <span>$</span></label>
+        <input type="number" id="cashInvested" value="45000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Flujo de caja anual <span>$</span></label>
+        <input type="number" id="cashAnnual" value="7800" step="100">
+      </div>
+      <div class="result-box">
+        <div class="primary" id="cashResult">17.3%</div>
+        <div class="secondary">Retorno sobre efectivo</div>
+        <div class="sub"><i class="far fa-calendar-alt"></i> Basado en ingresos anuales</div>
+      </div>
+      <div class="calc-actions">
+        <button class="btn btn-primary" id="calcCash"><i class="fas fa-sync-alt"></i> Actualizar</button>
+      </div>
+    </div>
+
+    <!-- 3. DSCR -->
+    <div class="calc-card" id="dscrCard">
+      <div class="card-title">
+        <i class="fas fa-chart-pie"></i> 
+        <div>DSCR <span class="subtitle">Relación de la cobertura sobre el servicio de deuda</span></div>
+      </div>
+      <div class="input-group">
+        <label>Ingreso operativo neto (ION) <span>$</span></label>
+        <input type="number" id="dscrNoi" value="42000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Servicio de deuda total (anual) <span>$</span></label>
+        <input type="number" id="dscrDebt" value="32000" step="1000">
+      </div>
+      <div class="result-box">
+        <div class="primary" id="dscrResult">1.31</div>
+        <div class="secondary">Relación de cobertura sobre el servicio de deuda</div>
+        <div class="sub" id="dscrStatus">✅ Saludable (>1.25)</div>
+      </div>
+      <div class="calc-actions">
+        <button class="btn btn-primary" id="calcDscr"><i class="fas fa-sync-alt"></i> Calcular</button>
+      </div>
+    </div>
+
+    <!-- 4. Compra, Reforma y Venta -->
+    <div class="calc-card" id="flipCard">
+      <div class="card-title">
+        <i class="fas fa-hammer"></i> 
+        <div>Compra, Reforma y Venta <span class="subtitle">Fix & Flip</span></div>
+      </div>
+      <div class="input-group">
+        <label>Precio de compra <span>$</span></label>
+        <input type="number" id="flipPurchase" value="120000" step="5000">
+      </div>
+      <div class="input-group">
+        <label>Reforma / costes de mantenimiento <span>$</span></label>
+        <input type="number" id="flipRehab" value="35000" step="1000">
+      </div>
+      <div class="input-group">
+        <label>Valor después de reforma (VDR) <span>$</span></label>
+        <input type="number" id="flipArv" value="185000" step="5000">
+      </div>
+      <div class="result-box">
+        <div class="primary" id="flipProfit">$30,000</div>
+        <div class="secondary" id="flipRoi">ROI: 19.4%</div>
+        <div class="sub" id="flipNote">Beneficio estimado tras la venta</div>
+      </div>
+      <div class="calc-actions">
+        <button class="btn btn-primary" id="calcFlip"><i class="fas fa-sync-alt"></i> Calcular</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Affiliate Banner -->
+  <div class="affiliate-banner">
+    <p><i class="fas fa-handshake"></i> Obtén pre-aprobación · Compara prestamistas · Herramientas para propiedades</p>
+    <div class="affiliate-links">
+      <a href="#"><i class="fas fa-credit-card"></i> Prestamistas</a>
+      <a href="#"><i class="fas fa-tools"></i> Estimador</a>
+      <a href="#"><i class="fas fa-file-signature"></i> Generación de leads</a>
+      <a href="#"><i class="fas fa-chart-line"></i> Guías ROI</a>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <i class="fas fa-info-circle"></i> Todos los cálculos son estimados. Siempre consulta con un asesor financiero. 
+    <span style="margin:0 8px;">·</span> investmentforroi.com
+  </div>
+</div>
+
+<script>
+  (function() {
+    // ----- BRRRR -----
+    function calcBrrrr() {
+      const purchase = parseFloat(document.getElementById('brrrrPurchase').value) || 0;
+      const rehab = parseFloat(document.getElementById('brrrrRehab').value) || 0;
+      const arv = parseFloat(document.getElementById('brrrrArv').value) || 0;
+      const rent = parseFloat(document.getElementById('brrrrRent').value) || 0;
+
+      const totalCost = purchase + rehab;
+      const equity = Math.max(0, arv - totalCost);
+      const roi = totalCost > 0 ? (equity / totalCost) * 100 : 0;
+      const cashflow = rent * 0.7; 
+
+      document.getElementById('brrrrEquity').textContent = '$' + equity.toLocaleString('en-US', {maximumFractionDigits:0});
+      document.getElementById('brrrrRoi').textContent = 'ROI: ' + roi.toFixed(1) + '%';
+      document.getElementById('brrrrCashflow').textContent = 'Flujo de caja mensual: $' + cashflow.toLocaleString('en-US', {maximumFractionDigits:0});
+    }
+
+    // ----- Retorno sobre Efectivo -----
+    function calcCash() {
+      const invested = parseFloat(document.getElementById('cashInvested').value) || 1;
+      const annual = parseFloat(document.getElementById('cashAnnual').value) || 0;
+      const coc = (annual / invested) * 100;
+      document.getElementById('cashResult').textContent = coc.toFixed(1) + '%';
+    }
+
+    // ----- DSCR -----
+    function calcDscr() {
+      const noi = parseFloat(document.getElementById('dscrNoi').value) || 0;
+      const debt = parseFloat(document.getElementById('dscrDebt').value) || 1;
+      const ratio = noi / debt;
+      document.getElementById('dscrResult').textContent = ratio.toFixed(2);
+      const status = document.getElementById('dscrStatus');
+      if (ratio >= 1.25) status.innerHTML = '✅ Saludable (>1.25)';
+      else if (ratio >= 1.0) status.innerHTML = '⚠️ Marginal (1.0–1.25)';
+      else status.innerHTML = '❌ Por debajo de 1.0 (riesgoso)';
+    }
+
+    // ----- Compra, Reforma y Venta -----
+    function calcFlip() {
+      const purchase = parseFloat(document.getElementById('flipPurchase').value) || 0;
+      const rehab = parseFloat(document.getElementById('flipRehab').value) || 0;
+      const arv = parseFloat(document.getElementById('flipArv').value) || 0;
+      const profit = arv - (purchase + rehab);
+      const roi = (purchase + rehab) > 0 ? (profit / (purchase + rehab)) * 100 : 0;
+      document.getElementById('flipProfit').textContent = '$' + profit.toLocaleString('en-US', {maximumFractionDigits:0});
+      document.getElementById('flipRoi').textContent = 'ROI: ' + roi.toFixed(1) + '%';
+      document.getElementById('flipNote').textContent = profit >= 0 ? '✅ Beneficio positivo' : '⚠️ Posible pérdida';
+    }
+
+    // Attach events
+    document.getElementById('calcBrrrr').addEventListener('click', calcBrrrr);
+    document.getElementById('calcCash').addEventListener('click', calcCash);
+    document.getElementById('calcDscr').addEventListener('click', calcDscr);
+    document.getElementById('calcFlip').addEventListener('click', calcFlip);
+
+    // Auto-calc on input change
+    const inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(inp => {
+      inp.addEventListener('change', function(e) {
+        const card = this.closest('.calc-card');
+        if (!card) return;
+        if (card.id === 'brrrrCard') calcBrrrr();
+        else if (card.id === 'cashCard') calcCash();
+        else if (card.id === 'dscrCard') calcDscr();
+        else if (card.id === 'flipCard') calcFlip();
+      });
+    });
+
+    // Initial calc
+    calcBrrrr();
+    calcCash();
+    calcDscr();
+    calcFlip();
+
+    // Affiliate links
+    document.querySelectorAll('.affiliate-links a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('🔗 Enlace de afiliado / generación de leads: ' + this.textContent.trim() + '\n(listo para integración con AdSense / Ezoic)');
+      });
+    });
+
+    // Ad badge
+    document.querySelector('.ad-badge')?.addEventListener('click', function() {
+      alert('📢 Espacio publicitario / listados de prestamistas patrocinados — listo para monetizar.');
+    });
+
+  })();
+</script>
+</body>
+</html>
